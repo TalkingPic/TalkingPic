@@ -1,4 +1,0 @@
-TalkingPic
-==========
-
-TalkingPic Master Branch
