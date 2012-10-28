@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pmain View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="TPmainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -25,7 +25,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="WWR-Ut-9j2" kind="push" id="LdJ-m0-fA1"/>
+                                    <action selector="didClickFacebook:" destination="2" eventType="touchUpInside" id="nk4-Yc-Ays"/>
+                                    <segue destination="WWR-Ut-9j2" kind="push" id="w5H-bI-23T"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TalkingPic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJv-KH-KdB">
@@ -401,10 +402,10 @@
             </objects>
             <point key="canvasLocation" x="1623" y="-337"/>
         </scene>
-        <!--View Controller-->
+        <!--Pfacebook Authentication View Controller-->
         <scene sceneID="wud-6a-eiP">
             <objects>
-                <viewController id="WWR-Ut-9j2" sceneMemberID="viewController">
+                <viewController id="WWR-Ut-9j2" customClass="TPfacebookAuthenticationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KcG-QU-cDQ">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -465,6 +466,15 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
+        <class className="TPfacebookAuthenticationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPfacebookAuthenticationViewController.h"/>
+        </class>
+        <class className="TPmainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPmainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="didClickFacebook:"/>
+            </relationships>
+        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -473,6 +483,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Kwy-8o-ooV"/>
-        <segue reference="7xL-2x-7JT"/>
+        <segue reference="GpA-Fh-zfQ"/>
     </inferredMetricsTieBreakers>
 </document>
